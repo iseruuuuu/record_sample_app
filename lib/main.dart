@@ -31,13 +31,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-
+  var record = (name: "ma", count: 0);
+  var record2 = ("ma", 0);
 
   void _incrementCounter() {
     setState(() {
       _counter++;
     });
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +56,15 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headline4,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '${record.count}',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '${record2.$2}',
+              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
@@ -70,4 +77,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
